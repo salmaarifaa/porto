@@ -41,6 +41,14 @@
 .xp-gal small{display:block;color:#888}
 .xp-empty{border:1px dashed #444;padding:12px;font-size:13px;color:#888}
 .xp-cert{width:100%;height:360px;border:1px solid #333;background:#fff}
+.xp-car{display:block;position:relative}
+.xp-car .carousel-inner,.xp-car .carousel-item,.xp-slide{height:100%}
+.xp-slide{background:#1b1b1b center/cover no-repeat}
+.xp-car .carousel-indicators{margin-bottom:8px}
+.xp-car .carousel-indicators li{width:8px;height:8px;border-radius:50%;border:0}
+.xp-car .carousel-control-prev,.xp-car .carousel-control-next{width:14%;opacity:.0;transition:opacity .2s}
+.xp-car:hover .carousel-control-prev,.xp-car:hover .carousel-control-next{opacity:.9}
+@media(hover:none){.xp-car .carousel-control-prev,.xp-car .carousel-control-next{opacity:.7}}
 @media(max-width:767px){.xp-photo{height:210px;margin-top:22px}.xp-photo b{font-size:30px}}
 </style>
 <style>
@@ -134,7 +142,7 @@
 		            	<li class="d-flex"><span>Address:</span> <span>Tempel, Sleman, Yogyakarta</span></li>
 		            	<li class="d-flex"><span>Zip code:</span> <span>55552</span></li>
 		            	<li class="d-flex"><span>Email:</span> <span>salmaarifatsani@gmail.com</span></li>
-		            	<li class="d-flex"><span>Phone: </span> <span>+62-882-1629-2604</span></li>
+		            	<li class="d-flex"><span>Phone: </span> <span>6288216292604</span></li>
 		            </ul>
 		          </div>
 		        </div>
@@ -144,12 +152,12 @@
         </div>
     	</div>
     </section>
-  <br><br><br>
+<br><br><br>
     <section class="ftco-section ftco-no-pb" id="education-section" style="padding-top:10px">
     <div class="container">
       <div class="heading-section ftco-animate"><h2 style="font-size: 30px;">Education</h2><hr style="width: 50px; height: 3px; background-color: #ffbd39; border: none; margin: 8px 0 24px;"></div>
       <div class="row ftco-animate">
-        <div class="col-md-6"><div class="edu-box"><span class="y">2022 – 2026</span><h3>Bachelor of Geodetic Engineering</h3><p>Universitas Gadjah Mada, Yogyakarta</p><span class="gpa">GPA 3.53 / 4.00</span><span class="gpa">TOEFL 539</span></div></div>
+        <div class="col-md-6"><div class="edu-box"><span class="y">2022 – Present</span><h3>Bachelor of Geodetic Engineering</h3><p>Universitas Gadjah Mada, Yogyakarta</p><span class="gpa">GPA 3.53 / 4.00</span><span class="gpa">TOEFL 539</span></div></div>
         <div class="col-md-6"><div class="edu-box"><span class="y">2019 – 2022</span><h3>High School Diploma</h3><p>SMA Negeri 1 Sleman, Yogyakarta</p></div></div>
       </div>
     </div>
@@ -161,7 +169,7 @@
         <div class="col-md-10 heading-section text-center ftco-animate">
           <h1 class="big big-2">Experience</h1>
           <h2 class="mb-4">Experience &amp; Projects</h2>
-          <p>Pengalaman kerja, magang, proyek, dan riset Salma Arifa Tsani.</p>
+          <p>Pengalaman kerja, magang, proyek, dan riset Salma Arifa Tsani, diurutkan dari yang terbaru.</p>
         </div>
       </div>
       <div id="xp-list"></div>
@@ -194,9 +202,9 @@
         <div class="col-md-4 mb-4 mb-md-0 ftco-animate"><div class="sk-box"><h3>Software</h3><ul>
           <li><b>GIS:</b> QGIS, ArcGIS, Global Mapper</li>
           <li><b>Fotogrametri &amp; 3D:</b> Agisoft Metashape, SketchUp</li>
-          <li><b>Penginderaan jauh:</b> ENVI, PCI Geomatica, Google Earth Engine</li>
-          <li><b>CAD &amp; survei:</b> AutoCAD, Civil 3D, Geovia Surpac</li>
-          <li><b>Data &amp; pemrograman:</b> Python, HTML, CSS, MATLAB</li></ul></div></div>
+          <li><b>Penginderaan jauh:</b> ENVI, PCI Geomatica</li>
+          <li><b>CAD &amp; survei:</b> AutoCAD, Civil 3D</li>
+          <li><b>Data &amp; pemrograman:</b> Python, MATLAB</li></ul></div></div>
         <div class="col-md-4 mb-4 mb-md-0 ftco-animate"><div class="sk-box"><h3>Kemampuan Teknis</h3><ul>
           <li>Fotogrametri SfM-MVS dan Gaussian Splatting</li>
           <li>Akuisisi data LiDAR drone dan SLAM LiDAR</li>
@@ -281,7 +289,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://6288216292604">+ 62 882 1629 2604</a></p>
+	            <p><a href="tel://6288216292604">6288216292604</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -327,7 +335,7 @@
           </div>
 
           <div class="col-md-6 d-flex">
-          	<div class="img" style="background-image: url(images/sampul2.png); width:100%; height: 100%; background-size: cover;"></div>
+          	<div class="img" style="background-image: url(images/sal.png); width:100%; height: 100%; background-size: cover;"></div>
           </div>
         </div>
       </div>
@@ -379,43 +387,57 @@
   
   <script>
 /* ===== DATA PENGALAMAN & PROYEK (urut terbaru -> lama) =====
-   Tambah foto : photos:[{src:"media/borobudur/1.jpg",cap:"Keterangan"}]  (foto pertama jadi gambar di kartu)
-   Tambah sertifikat : certs:["media/borobudur/sertifikat.pdf"]            */
+   Foto & sertifikat OPSIONAL: tambah di item mana saja, kalau tidak ada ya dibiarkan.
+   Tambahkan SATU KALI saja sebelum tanda } penutup item, mis.:
+     ,photos:[{src:"images/grace-fo-1.jpg",cap:"Keterangan"},{src:"images/grace-fo-2.jpg"}]
+     ,certs:["media/gws/sertifikat.pdf"]
+   1 foto = gambar biasa; 2+ foto = slide otomatis (bisa digeser)           */
 var XP=[
 {id:"gws",tag:"Riset",ph:"GRACE-FO",date:"Oktober 2026 – sekarang",title:"Research Team Member — Simpanan Air Tanah Pesisir Utara Jawa",org:"Departemen Teknik Geodesi, Universitas Gadjah Mada",
  sum:"Riset kolaboratif bersama dosen Teknik Geodesi UGM tentang variasi spasiotemporal simpanan air tanah di pesisir utara Jawa dan beberapa kota regional.",
  chips:["GRACE-FO","GLDAS","Analisis Spasiotemporal"],
- pts:["Terlibat dalam proyek riset kolaboratif bersama dosen Departemen Teknik Geodesi UGM.","Mengolah dan menganalisis data satelit GRACE-FO dan GLDAS.","Mempelajari dinamika simpanan air tanah pada skala regional di sepanjang pesisir utara Jawa."],photos:[],certs:[]},
+ pts:["Terlibat dalam proyek riset kolaboratif bersama dosen Departemen Teknik Geodesi UGM.","Mengolah dan menganalisis data satelit GRACE-FO dan GLDAS.","Mempelajari dinamika simpanan air tanah pada skala regional di sepanjang pesisir utara Jawa."], photos:[{src: "images/grace-fo.jpg"}]},
 {id:"lpp",tag:"Pekerjaan",ph:"STDB",date:"Oktober 2026 – sekarang",title:"Data Entry Staff — STDB",org:"PT LPP Agro, Yogyakarta",
  sum:"Input, pengelolaan, dan verifikasi data kebun pada sistem Surat Tanda Daftar Budidaya (STDB).",
  chips:["Data Management","Verifikasi Data","STDB"],
- pts:["Menginput, mengelola, dan memverifikasi data perkebunan pada sistem Surat Tanda Daftar Budidaya (STDB).","Mendukung kegiatan pendataan kebun dan administrasi."],photos:[],certs:[]},
+ pts:["Menginput, mengelola, dan memverifikasi data perkebunan pada sistem Surat Tanda Daftar Budidaya (STDB).","Mendukung kegiatan pendataan kebun dan administrasi."],photos:[{src: "images/lpp.jpg"}]},
 {id:"skripsi",tag:"Skripsi",ph:"SKRIPSI",date:"2026",title:"Analisis Spasio-Temporal Simpanan Air Tanah DKI Jakarta",org:"Skripsi · Teknik Geodesi, Universitas Gadjah Mada",
  sum:"Integrasi data GRACE-FO dan GLDAS untuk menganalisis simpanan air tanah dan korelasinya dengan penurunan tanah di wilayah DKI Jakarta.",
  chips:["GRACE-FO","GLDAS","Penurunan Tanah","MATLAB","QGIS"],
- pts:["Mengolah data mascon GRACE/GRACE-FO (JPL RL06.3 dan CSR RL0603) serta GLDAS.","Menurunkan anomali simpanan air tanah (GWSA) dari TWSA dikurangi komponen GLDAS.","Menganalisis variasi spasio-temporal dan mengkorelasikannya dengan penurunan tanah di DKI Jakarta."],photos:[],certs:[]},
+ pts:["Mengolah data mascon GRACE/GRACE-FO (JPL RL06.3 dan CSR RL0603) serta GLDAS.","Menurunkan anomali simpanan air tanah (GWSA) dari TWSA dikurangi komponen GLDAS.","Menganalisis variasi spasio-temporal dan mengkorelasikannya dengan penurunan tanah di DKI Jakarta."]},
 {id:"borobudur",tag:"Magang",ph:"BOROBUDUR",date:"April – Mei 2026",title:"Digitization and Documentation of Cultural Heritage Sites",org:"Museum dan Cagar Budaya, Unit Warisan Dunia Borobudur",
  sum:"Digitalisasi data cagar budaya, pembuatan model 3D stupa dengan SfM-MVS dan Gaussian Splatting, serta modul digitalisasi berbasis QGIS.",
  chips:["SfM-MVS","Gaussian Splatting","QGIS","3D Modeling"],
- pts:["Berpartisipasi dalam digitalisasi data cagar budaya.","Membuat dan mengevaluasi model 3D stupa dengan metode SfM-MVS dan Gaussian Splatting.","Mengembangkan modul digitalisasi berbasis QGIS.","Membantu merancang layout IHA Shop.","Membantu pelatihan 3D modeling untuk mahasiswa."],photos:[],certs:[]},
+ pts:["Berpartisipasi dalam digitalisasi data cagar budaya.","Membuat dan mengevaluasi model 3D stupa dengan metode SfM-MVS dan Gaussian Splatting.","Mengembangkan modul digitalisasi berbasis QGIS.","Membantu merancang layout IHA Shop.","Membantu pelatihan 3D modeling untuk mahasiswa."],photos:[{src: "images/kpbudur.jpeg"}],certs:["media/surat_borobudur.pdf"]},
 {id:"ppm",tag:"Proyek",ph:"3D MAP",date:"Agustus – Desember 2025",title:"Project Team Member — Peta 3D Karang Pramuka Campground",org:"Program Pengabdian kepada Masyarakat (PPM) UGM · bersama tim Capstone PRGG 2025",
  sum:"Peta 3D interaktif berbasis web untuk Karang Pramuka Campground, Kaliurang, dari data LiDAR drone dan SLAM LiDAR.",
  chips:["LiDAR Drone","SLAM LiDAR","3D Modeling","Web Map"],link:{url:"https://buper-prgg24-2025.vercel.app/",label:"Open Project"},
- pts:["Akuisisi data spasial dengan LiDAR drone dan SLAM LiDAR.","Pengolahan data dan pemodelan 3D.","Pengembangan visualisasi peta berbasis web.","Berkolaborasi dengan tim Capstone PRGG 2025 menghasilkan produk peta 3D interaktif untuk Pengabdian kepada Masyarakat UGM."],photos:[],certs:[]},
+ pts:["Akuisisi data spasial dengan LiDAR drone dan SLAM LiDAR.","Pengolahan data dan pemodelan 3D.","Pengembangan visualisasi peta berbasis web.","Berkolaborasi dengan tim Capstone PRGG 2025 menghasilkan produk peta 3D interaktif untuk Pengabdian kepada Masyarakat UGM."],photos:[{src: "images/prgg.jpeg"},{src: "images/prgg2.png"},{src: "images/prgg3.png"}]},
 {id:"bbws",tag:"Magang",ph:"SURVEY",date:"Juli – Agustus 2024",title:"Internship — Surveying and Measurement",org:"Balai Besar Wilayah Sungai (BBWS) Serayu Opak",
  sum:"Pengolahan dan evaluasi data pengukuran, serta survei lapangan penampang Sungai Winongo di Mlati.",
  chips:["Total Station","Civil 3D","Survei Sungai"],
- pts:["Mengolah dan mengevaluasi data pengukuran, termasuk data potongan melintang dan memanjang.","Ikut survei lapangan, termasuk pengukuran penampang Sungai Winongo, Mlati.","Memverifikasi konsistensi data jarak dan elevasi hasil pengukuran.","Menguji kolimasi dan indeks vertikal total station untuk memastikan akurasi alat ukur."],photos:[],certs:[]},
+ pts:["Mengolah dan mengevaluasi data pengukuran, termasuk data potongan melintang dan memanjang.","Ikut survei lapangan, termasuk pengukuran penampang Sungai Winongo, Mlati.","Memverifikasi konsistensi data jarak dan elevasi hasil pengukuran.","Menguji kolimasi dan indeks vertikal total station untuk memastikan akurasi alat ukur."],photos:[{src: "images/bbws.jpeg"}],certs:["media/sertif_bbws.pdf"]},
 {id:"bpn",tag:"Magang",ph:"ORTHOPHOTO",date:"Januari 2024",title:"Internship — Survey and Mapping Section",org:"Kantor Pertanahan Kabupaten Sleman (ATR/BPN)",
  sum:"Pengelolaan dan pengolahan data pertanahan, digitalisasi dokumen survei, serta uji akurasi orthophoto.",
  chips:["AutoCAD","Orthophoto","Data Spasial"],
- pts:["Mengelola dan mengolah data pertanahan, termasuk digitalisasi dan unggah dokumen survei ke sistem administrasi pertanahan.","Mengolah dan menyesuaikan data spasial.","Melakukan uji akurasi data orthophoto untuk memastikan konsistensi dan presisi data pemetaan."],photos:[],certs:[]}
+ pts:["Mengelola dan mengolah data pertanahan, termasuk digitalisasi dan unggah dokumen survei ke sistem administrasi pertanahan.","Mengolah dan menyesuaikan data spasial.","Melakukan uji akurasi data orthophoto untuk memastikan konsistensi dan presisi data pemetaan."],photos:[{src: "images/bpn.jpeg"}],certs:["media/surat_bpn.pdf"]}
 ];
 (function(){
  function e(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
  var h="";
+ XP.forEach(function(i){i.photos=i.photos||[];i.certs=i.certs||[]});
  XP.forEach(function(i){
-  var ph=i.photos.length?'<div class="xp-photo" style="background-image:url(\''+i.photos[0].src+'\')"></div>':'<div class="xp-photo"><b>'+e(i.ph)+'</b></div>';
+  var ph,n=i.photos.length;
+  if(n==0)ph='<div class="xp-photo"><b>'+e(i.ph)+'</b></div>';
+  else if(n==1)ph='<div class="xp-photo" style="background-image:url(\''+i.photos[0].src+'\')"></div>';
+  else{
+   ph='<div id="car-'+i.id+'" class="carousel slide xp-photo xp-car" data-ride="carousel" data-interval="4000" data-pause="hover"><ol class="carousel-indicators">'
+    +i.photos.map(function(p,k){return '<li data-target="#car-'+i.id+'" data-slide-to="'+k+'"'+(k?'':' class="active"')+'></li>'}).join("")
+    +'</ol><div class="carousel-inner">'
+    +i.photos.map(function(p,k){return '<div class="carousel-item'+(k?'':' active')+'"><div class="xp-slide" style="background-image:url(\''+p.src+'\')"></div></div>'}).join("")
+    +'</div><a class="carousel-control-prev" href="#car-'+i.id+'" role="button" data-slide="prev" aria-label="Sebelumnya"><span class="carousel-control-prev-icon"></span></a>'
+    +'<a class="carousel-control-next" href="#car-'+i.id+'" role="button" data-slide="next" aria-label="Berikutnya"><span class="carousel-control-next-icon"></span></a></div>';
+  }
   h+='<div class="row xp-row align-items-center ftco-animate"><div class="col-md-7 pr-md-5">'
    +'<span class="xp-date">'+e(i.date)+'</span><span class="xp-tag">'+e(i.tag)+'</span>'
    +'<h3>'+e(i.title)+'</h3><div class="xp-org">'+e(i.org)+'</div><p class="xp-sum">'+e(i.sum)+'</p>'
@@ -430,8 +452,8 @@ var XP=[
   $("#xm-date").text(i.date+" · "+i.tag);$("#xm-title").text(i.title);$("#xm-org").text(i.org);
   var b='<p>'+e(i.sum)+'</p><ul>'+i.pts.map(function(p){return "<li>"+e(p)+"</li>"}).join("")+'</ul><div class="xp-chips">'+i.chips.map(function(c){return "<span>"+e(c)+"</span>"}).join("")+'</div>';
   if(i.link)b+='<a class="btn btn-primary py-2 px-4 mt-2" target="_blank" rel="noopener" href="'+i.link.url+'">'+e(i.link.label)+'</a>';
-  b+='<h6>Foto kegiatan</h6>'+(i.photos.length?'<div class="xp-gal">'+i.photos.map(function(p){return '<a href="'+p.src+'" target="_blank"><img src="'+p.src+'" alt=""><small>'+e(p.cap||"")+'</small></a>'}).join("")+'</div>':'<div class="xp-empty">Foto kegiatan akan ditambahkan.</div>');
-  b+='<h6>Sertifikat</h6>'+(i.certs.length?i.certs.map(function(c){return '<iframe class="xp-cert" src="'+c+'"></iframe><a href="'+c+'" target="_blank">Buka PDF</a>'}).join(""):'<div class="xp-empty">Sertifikat akan ditambahkan.</div>');
+  if(i.photos.length)b+='<h6>Foto kegiatan</h6><div class="xp-gal">'+i.photos.map(function(p){return '<a href="'+p.src+'" target="_blank"><img src="'+p.src+'" alt=""><small>'+e(p.cap||"")+'</small></a>'}).join("")+'</div>';
+  if(i.certs.length)b+='<h6>Sertifikat</h6>'+i.certs.map(function(c){return '<iframe class="xp-cert" src="'+c+'"></iframe><a href="'+c+'" target="_blank">Buka PDF</a>'}).join("");
   $("#xm-body").html(b);
  });
 })();
